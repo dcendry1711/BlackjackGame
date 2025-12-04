@@ -6,6 +6,7 @@
 
 body {
     background-image: url('table.png');
+    background-size: cover;
     display: flex;
     justify-content: center;
 }
@@ -20,6 +21,17 @@ main {
 
 h1 {
     color: goldenrod;
+}
+
+button {
+    background: goldenrod;
+    width: 150px;
+    color: #016f32;
+    border: none;
+    border-radius: 8px;
+    padding: .5em 0;
+    cursor: pointer;
+    font-weight: 700;
 }
 
 p {
