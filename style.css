@@ -44,3 +44,7 @@ p {
     font-style: italic;
 }
 
+#next-card-btn{
+    display: none;
+}
+

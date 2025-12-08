@@ -2,6 +2,7 @@ const startBtn = document.getElementById('start-btn')
 const messageEl = document.getElementById('message-el')
 const cardsEl = document.getElementById('cards-el')
 const sumEl = document.getElementById("sum-el")
+const nextCardBtn = document.getElementById('next-card-btn')
 
 const firstCard = Math.floor((Math.random() * 11)+1)
 const secondCard = Math.floor((Math.random() * 11)+1)
@@ -20,6 +21,7 @@ function startGame(){
         hasBlackjack = true
     } else if(sum <= 21){
         message = 'Do you want draw another card?'
+        nextCardBtn.style.display = 'block'
     } else {
         message = 'You lose!!!'
         isAlive = false
