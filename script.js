@@ -47,6 +47,9 @@ function renderGame(){
     if(sum === 21){
         message = 'Blackjack!'
         hasBlackjack = true
+        nextCardBtn.style.display = 'none'
+        startBtn.style.opacity = '1'
+        startBtn.disabled = false
     } else if(sum <= 21){
         message = 'Do you want draw another card?'
         startBtn.style.opacity = '0.5'
