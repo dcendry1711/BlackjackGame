@@ -50,11 +50,13 @@ function renderGame(){
     } else if(sum <= 21){
         message = 'Do you want draw another card?'
         startBtn.style.opacity = '0.5'
+        startBtn.disabled = true
         nextCardBtn.style.display = 'block'
     } else {
         message = 'You lose!!!'
         nextCardBtn.style.display = 'none'
         startBtn.style.opacity = '1'
+        startBtn.disabled = false
         isAlive = false
     }
     messageEl.textContent = message
