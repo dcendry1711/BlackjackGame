@@ -53,7 +53,6 @@ function renderGame(){
     } else {
         message = 'You lose!!!'
         isAlive = false
-        nextCardBtn.style.display = 'none'
     }
     messageEl.textContent = message
 }
@@ -64,6 +63,8 @@ function newCard(){
         sum += nCard 
         cardsArr.push(nCard)
         renderGame()
+    } else {
+        nextCardBtn.style.display = 'none'
     }
 }
 
