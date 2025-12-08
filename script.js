@@ -52,7 +52,7 @@ function renderGame(){
         startBtn.style.visibility = 'hidden'
         nextCardBtn.style.display = 'block'
         nextCardBtn.style.position = 'relative'
-        nextCardBtn.style.top = '-125px'
+        nextCardBtn.style.top = '-130px'
     } else {
         message = 'You lose!!!'
         nextCardBtn.style.display = 'none'
