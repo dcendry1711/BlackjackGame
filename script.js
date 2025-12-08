@@ -49,12 +49,12 @@ function renderGame(){
         hasBlackjack = true
     } else if(sum <= 21){
         message = 'Do you want draw another card?'
-        startBtn.style.opacity = '50'
+        startBtn.style.opacity = '0.5'
         nextCardBtn.style.display = 'block'
     } else {
         message = 'You lose!!!'
         nextCardBtn.style.display = 'none'
-        startBtn.style.opacity = '100'
+        startBtn.style.opacity = '1'
         isAlive = false
     }
     messageEl.textContent = message
