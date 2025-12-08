@@ -54,6 +54,7 @@ function renderGame(){
     } else {
         message = 'You lose!!!'
         nextCardBtn.style.display = 'none'
+        startBtn.style.visibility = 'visible'
         isAlive = false
     }
     messageEl.textContent = message
