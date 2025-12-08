@@ -6,15 +6,26 @@ const nextCardBtn = document.getElementById('next-card-btn')
 
 const firstCard = Math.floor((Math.random() * 11)+1)
 const secondCard = Math.floor((Math.random() * 11)+1)
-const sum = firstCard + secondCard
+const cardsArr = [firstCard,secondCard]
+
+let sum = firstCard + secondCard
 let hasBlackjack = false
 let isAlive = true
 let message = ''
 
 startBtn.addEventListener('click',startGame)
+nextCardBtn.addEventListener('click', newCard)
 
 function startGame(){
-    cardsEl.textContent = `Cards: ${firstCard}, ${secondCard}`
+    renderGame()
+}
+
+function renderGame(){
+    cardsEl.textContent = 'Cards: '
+    cardsArr.forEach(card =>{
+        cardsEl.textContent += `${card} `
+    })
+    // cardsEl.textContent = `Cards: ${firstCard}, ${secondCard}`
     sumEl.textContent = `Sum: ${sum}`
     if(sum === 21){
         message = 'Blackjack!'
@@ -27,5 +38,13 @@ function startGame(){
         isAlive = false
     }
     messageEl.textContent = message
+}
+
+function newCard(){
+    const nCard = Math.floor((Math.random() * 11)+1)
+    sum += nCard 
+    cardsArr.push(nCard)
+    console.log(cardsArr)
+    startGame()
 }
 
